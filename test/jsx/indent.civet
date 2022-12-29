@@ -446,6 +446,7 @@ describe "Unbraced function children in JSX", ->
     </li>}
     </For>
   """
+
   it "doesn't work on same line as text", ->
     throws """
       <For each={items}> Hello (item) => <li>{item}
