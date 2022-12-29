@@ -3846,6 +3846,9 @@ InlineJSXAttributeValue
   InlineJSXUnaryExpression InlineJSXBinaryOpRHS* ->
     if ($2.length) return module.processBinaryOpExpression($0)
     return $1
+  # NOTE: Adding ArrowFunction which has clearly distinctive notation
+  # (arrow after optional parameters)
+  ArrowFunction
 
 # BinaryOpRHS without whitespace and without ExpressionizedStatement
 InlineJSXBinaryOpRHS

@@ -114,6 +114,18 @@ describe "braced JSX attributes", ->
   """
 
   testCase """
+    arrow function, thin, no arguments, same line
+    ---
+    <Show fallback = =>{} >
+      Content
+    ---
+    <Show fallback={function() { return <div>Loading...</div> }}
+    when={cond()}>
+      Content
+    </Show>
+  """
+
+  testCase """
     value with whitespace / on its own line
     ---
     <Show keyed = true fallback =
